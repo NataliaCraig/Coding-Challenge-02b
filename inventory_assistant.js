@@ -1,4 +1,4 @@
-itemName = "Water Bottle"
+const itemName = "Water Bottle"
 let unitCost = 15;
 let currentStock = 100;
 let reorderLevel = 40
@@ -12,8 +12,8 @@ let reorderQuantity = (currentStock <= reorderLevel || weeksOfCover < supplierLe
 let estimatedReorderCost = reorderQuantity * unitCost
 let reorderNow = currentStock <= reorderLevel || weeksOfCover < supplierLeadTimeWeeks
 
-console.log("Item name" + itemName)
-console.log("Weeks of cover" + weeksOfCover)
-console.log("Reorder now?" + reorderNow)
-console.log("Recommended reorder quantity" +  reorderQuantity)
-console.log("Estimated reorder cost"+ estimatedReorderCost)
+console.log("Item name: " + itemName)
+console.log("Weeks of cover: " + weeksOfCover.toFixed(2))
+console.log("Reorder now?: " + reorderNow)
+console.log("Recommended reorder quantity: " +  reorderQuantity)
+console.log("Estimated reorder cost: "+ estimatedReorderCost.toFixed(2))
